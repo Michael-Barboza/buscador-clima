@@ -1,1 +1,21 @@
-@import "tailwindcss";
+:root {
+  --white: #ffffff;
+  --primary: #f59e0b; /* Color primario */
+  --secondary: #320488; /* Color secundario */
+  --background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  font-family: "Outfit", sans-serif;
+  background-image: url('/public/fondo-01.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  font-size: 2rem;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

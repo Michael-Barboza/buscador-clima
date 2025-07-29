@@ -1,9 +1,17 @@
-
+import styles from "./App.module.css";
+import Form from "./components/Form/Form";
 
 const App = () => {
   return (
-    <div className="text-3xl">App</div>
-  )
-}
+    <>
+      <h1 className={styles.title}> Buscando el Clima</h1>
 
-export default App
+      <div className={styles.container}>
+        <Form/>
+        <p>2</p>
+      </div>
+    </>
+  );
+};
+
+export default App;

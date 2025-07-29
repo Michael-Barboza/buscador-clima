@@ -1,0 +1,92 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px; /* Ancho máximo para pantallas grandes */
+  width: 90%; /* Ancho responsivo */
+  margin: 20px; /* Espaciado alrededor del formulario */
+  padding: 30px; /* Espaciado interno */
+  border-radius: 12px; /* Bordes redondeados */
+  background-color: var(--background); /* Fondo semi-transparente */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+.filed {
+  margin-bottom: 20px; /* Espacio entre campos */
+}
+
+.field::placeholder {
+  color: #999; /* Color del placeholder */
+  opacity: 0.7; /* Opacidad del placeholder */
+}
+
+label {
+  margin-bottom: 8px; /* Espacio debajo de la etiqueta */
+  font-weight: 600; /* Peso de fuente más fuerte */
+  color: var(--white);
+}
+
+select,
+input[type="text"] {
+  width: 100%;
+  padding: 12px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde claro */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 1.6rem; /* 16px */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+  transition: border-color 0.3s ease; /* Transición suave para el borde */
+}
+
+select:focus,
+input[type="text"]:focus {
+  border-color: var(--primary); /* Cambia el color del borde al enfocar */
+  outline: none; /* Sin contorno */
+  box-shadow: 0 0 5px rgba(245, 158, 11, 0.5); /* Sombra al enfocar */
+}
+
+button {
+  padding: 12px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: var(--secondary); /* Color de fondo */
+  color: var(--white); /* Color del texto */
+  font-size: 1.6rem; /* 16px */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+}
+
+button:hover {
+  background-color: #e68a00; /* Color más oscuro al pasar el ratón */
+  transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  /* Tabletas */
+  body {
+    padding: 10px; /* Espaciado alrededor del cuerpo */
+  }
+
+  .form {
+    padding: 20px; /* Ajuste de padding en tabletas */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Móviles */
+  body {
+    padding: 5px; /* Espaciado reducido en móviles */
+  }
+
+  .form {
+    padding: 15px; /* Ajuste de padding en móviles */
+  }
+
+  button {
+    font-size: 1.4rem; /* Tamaño de fuente más pequeño en móviles */
+  }
+
+  select,
+  input[type="text"] {
+    font-size: 1.4rem; /* Tamaño de fuente más pequeño en móviles */
+  }
+}
