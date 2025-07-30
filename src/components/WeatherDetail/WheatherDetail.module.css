@@ -1,0 +1,36 @@
+.container {
+  padding: 20px; /* Aumento del padding */
+  background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco suave */
+  border-radius: 15px; /* Aumento del radio de borde */
+  max-width: 400px;
+  margin: 30px auto; /* Centrado automático y margen superior e inferior */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transición suave para la sombra y transformación */
+}
+
+.container:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el mouse */
+}
+
+h2 {
+  color: #4a4a4a; /* Color más suave */
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin-bottom: 15px; /* Aumento del margen inferior */
+  font-size: 28px; /* Tamaño de fuente aumentado */
+  text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+p {
+  font-family: 'Arial', sans-serif;
+  margin: 12px 0; /* Aumento del margen vertical */
+  font-size: 18px; /* Tamaño de fuente aumentado */
+  line-height: 1.6; /* Mejora la legibilidad */
+  color: #666; /* Color del texto más claro */
+}
+
+strong {
+  color: #d9534f; /* Color del texto fuerte más vibrante */
+  font-weight: bold; /* Asegura que el texto sea negrita */
+}

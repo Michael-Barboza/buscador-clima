@@ -5,7 +5,7 @@ import type{ SearchType } from "../../types";
 import Alert from "../Alert/Alert";
 
 type FormProps = {
-  fetchWeather: () => void;
+  fetchWeather: (search: SearchType) => Promise<null | undefined>;
 };
 
 const Form = ( {fetchWeather} :FormProps ) => {
@@ -27,17 +27,17 @@ const Form = ( {fetchWeather} :FormProps ) => {
       setAlert("Todos los campos son obligatorios");
       return;
     }
-    fetchWeather();
+    fetchWeather(search);
   }
 
 
   return (
     <form 
-    className={styles.from}
+    className={styles.form}
     onSubmit={handleSumit}
     >
       {alert && <Alert>{alert}</Alert>}
-      <div className={styles.filed}>
+      <div className={styles.field}>
         <label htmlFor="country">País: {""}</label>
         <select 
         value={search.country} 
@@ -54,7 +54,7 @@ const Form = ( {fetchWeather} :FormProps ) => {
         </select>
       </div>
 
-      <div className={styles.filed}>
+      <div className={styles.field}>
         <label htmlFor="city">Ciudad: {""}</label>
         <input
           id="city"
