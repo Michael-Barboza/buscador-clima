@@ -3,11 +3,12 @@
   flex-direction: column;
   max-width: 600px; /* Ancho máximo para pantallas grandes */
   width: 90%; /* Ancho responsivo */
-  margin: 20px; /* Espaciado alrededor del formulario */
-  padding: 30px; /* Espaciado interno */
+  padding: 10px; /* Espaciado interno */
   border-radius: 12px; /* Bordes redondeados */
   background-color: var(--background); /* Fondo semi-transparente */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  margin: 0 auto; /* Centrado horizontal */
+  
 }
 
 .filed {

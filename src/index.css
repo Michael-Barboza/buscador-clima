@@ -4,18 +4,21 @@
   --secondary: #320488; /* Color secundario */
   --background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
 }
-html{
-  font-size: 62.5%;
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
 }
-body{
+
+body {
   font-family: "Outfit", sans-serif;
   background-image: url('/public/fondo-01.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--white);
-  font-size: 2rem;
+  font-size: 2rem; /* 20px */
   height: 100vh;
-  margin: 0;
+  margin:3rem;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  
 }
+

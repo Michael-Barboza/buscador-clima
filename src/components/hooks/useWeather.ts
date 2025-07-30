@@ -1,6 +1,6 @@
 import axios from "axios";
 import type { SearchType } from "../../types";
-import { z } from "zod";
+import {  z } from "zod";
 import { useMemo, useState } from "react";
 
 const Weather = z.object({
@@ -28,10 +28,12 @@ export default function useWeather() {
       humidity: 0,
     },
   });
+  const[loading, setLoading] = useState(false);
 
   const fetchWeather = async (search: SearchType) => {
     const appId = import.meta.env.VITE_API_KEY;
 
+setLoading(true);
     try {
       const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${search.city},${search.country}&appid=${appId}`;
       const { data } = await axios.get(geoUrl);
@@ -48,12 +50,15 @@ export default function useWeather() {
     } catch (error) {
       console.error("Error fetching weather data:", error);
       return null;
+    }finally {
+      setLoading(false);
     }
   };
 
   const hasWeatherData = useMemo(()=> weather.name ,[weather])
   return {
     weather,
+    loading,
     fetchWeather,
     hasWeatherData
   };
